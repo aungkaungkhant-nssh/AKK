@@ -4,7 +4,8 @@ import MaxWidthWrapper from "../wrappers/MaxWidthWrapper"
 import SideMenu from "./SideMenu"
 import Profile from "../home/Profile";
 import MenuList from "./MenuList";
-import SocialLink from "./SocialLink";
+import socialLinks from "@/constants/socialLinks";
+import LinkItem from "./LinkItem";
 
 
 export default function Navbar() {
@@ -26,7 +27,17 @@ export default function Navbar() {
                     <MenuList />
                 </div>
                 <div className="hidden lg:inline-block">
-                    <SocialLink />
+                    {
+                        socialLinks.map((link, index) => (
+                            <LinkItem
+                                key={index}
+                                icon={link.icon}
+                                link={link.link}
+                                color={link.color}
+                            />
+                        ))
+                    }
+
                 </div>
                 <div className="lg:hidden">
                     <SideMenu />

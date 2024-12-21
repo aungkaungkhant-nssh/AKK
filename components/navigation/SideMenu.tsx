@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Profile from "../home/Profile";
 import { IoClose } from "react-icons/io5";
 import MenuList from "./MenuList";
-import SocialLink from "./SocialLink";
+import SocialLink from "./LinkItem";
 import { useState } from "react";
 const sidebarVariants = {
     open: { x: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
