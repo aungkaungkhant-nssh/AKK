@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 interface LinkGroupsProps {
     icon: React.ComponentType<{ className?: string; size?: number }>;
     link: string;
+    size?: number
     color?: string;
 }
 
-const LinkItem = ({ icon: Icon, link, color = "primary" }: LinkGroupsProps) => {
+const LinkItem = ({ icon: Icon, link, size = 23, color = "primary", }: LinkGroupsProps) => {
     return (
         <a href={link} target="_blank" rel="noopener noreferrer">
             <button className="text-white border border-primary rounded-full p-2 hover:bg-foreground mx-2">
@@ -27,7 +28,7 @@ const LinkItem = ({ icon: Icon, link, color = "primary" }: LinkGroupsProps) => {
                     }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    <Icon className={`text-${color}`} size={23} />
+                    <Icon className={`text-${color}`} size={size} />
                 </motion.div>
             </button>
         </a>

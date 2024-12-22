@@ -4,8 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Profile from "../home/Profile";
 import { IoClose } from "react-icons/io5";
 import MenuList from "./MenuList";
-import SocialLink from "./LinkItem";
+import socialLinks from "@/constants/socialLinks";
 import { useState } from "react";
+import LinkItem from "./LinkItem";
 const sidebarVariants = {
     open: { x: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
     closed: { x: '100%', transition: { type: 'spring', stiffness: 300, damping: 30 } },
@@ -49,7 +50,16 @@ export default function SideMenu() {
                                     <MenuList className="flex-col " />
                                 </div>
                                 <div className="absolute bottom-0 left-[30%] ">
-                                    <SocialLink />
+                                    {
+                                        socialLinks.map((link, index) => (
+                                            <LinkItem
+                                                key={index}
+                                                icon={link.icon}
+                                                link={link.link}
+                                                color={link.color}
+                                            />
+                                        ))
+                                    }
                                 </div>
                             </div>
 
