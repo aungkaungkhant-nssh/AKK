@@ -1,50 +1,64 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
-
-import Pf from '@/public/images/pf.png'
-import Image from "next/image";
 import iconLinks from "@/constants/iconLinks";
 import LinkItem from "../navigation/LinkItem";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function ProjectCard() {
+export type PropsTypes = {
+    project: {
+        id: number;
+        title: string;
+        subTitle: string;
+        logo: string | React.ElementType
+        githubLink?: string | null;
+        demoLink?: string | null;
+        desc?: string | null;
+
+    };
+};
+
+export default function ProjectCard({ project }: PropsTypes) {
     return (
-        <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] md:w-[48%] lg:w-[30%]   mt-[20px]">
-            <div className={cn('flex items-start gap-3 justify-between')}>
+        <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] md:w-[48%] lg:w-[30%] mt-[20px] min-h-[180px] relative">
+
+            <div className={cn("flex items-start gap-3 justify-between")}>
                 <div>
                     <div>
                         <Link href="/">
-                            <h1 className="text-xl text-primary font-bold">AKK portfolio</h1>
+                            <h1 className={cn(`text-xl text-primary font-bold`)}>{project.title}</h1>
                         </Link>
 
-                        <p className="text-tertiary tracking-wide text-justify">
-                            Explore my portfolio to see projects that showcase my skills . Let’s connect and create something remarkable!
-                        </p>
+                        <p className="text-tertiary tracking-wide text-justify mt-1">{project.subTitle}</p>
                     </div>
-                    <div className="mt-3">
-                        {
-                            iconLinks.map((link, index) => (
-                                <LinkItem
-                                    key={index}
-                                    icon={link.icon}
-                                    link={link.link}
-                                    color={link.color}
-                                    size={18}
-                                />
-                            ))
-                        }
-                    </div>
+
                 </div>
                 <div>
-                    <Image
-                        src={Pf}
-                        alt="akk"
-                        className="border rounded-lg"
-                        width={150}
-                    />
+                    {(
+                        <Image
+                            src={project.logo as string}
+                            alt={`${project.title} logo`}
+                            className="border rounded-lg"
+                            width={100}
+                            height={100}
+                        />)
+                    }
+
                 </div>
             </div>
-        </div>
 
-    )
+            <div className="mt-3 absolute bottom-3 left-[50%] transform translate-x-[-50%] flex gap-2">
+                {iconLinks.map((link, index) => (
+                    <LinkItem
+                        key={index}
+                        icon={link.icon}
+                        link={link.link}
+                        color={link.color}
+                        size={18}
+                    />
+                ))}
+            </div>
+
+        </div>
+    );
 }
