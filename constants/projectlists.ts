@@ -1,7 +1,8 @@
 import Pf from '@/public/images/pf.png'
 import ToeTet from '@/public/images/toetet.png'
 import Insider from '@/public/images/insider.png';
-import DramLab from '@/public/images/dreamlab.png'
+import DramLab from '@/public/images/dreamlab.png';
+import Ultimate from '@/public/images/ultimate.jpeg';
 
 export const projectLists = [
     {
@@ -80,5 +81,14 @@ export const projectLists = [
         logo: DramLab.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/UCSLVoltingSystem",
         demoLink: null,
+    },
+    {
+        id: 9,
+        title: 'Ultimate Life Style',
+        subTitle: "Health care system",
+        desc: "Our university voting system is designed to provide a seamless and transparent process for selecting the king and queen. By leveraging an easy-to-use digital platform, students can cast their votes in real-time, ensuring that every voice is heard. The system promotes fairness, security, and efficiency, allowing participants to engage in the election with confidence. With this solution, we aim to create a fun and democratic way for students to elect their university leaders.",
+        logo: Ultimate.src,
+        githubLink: null,
+        demoLink: "https://www.ultimatelifestyle.app/",
     }
 ]

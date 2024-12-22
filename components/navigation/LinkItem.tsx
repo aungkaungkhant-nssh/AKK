@@ -10,6 +10,7 @@ interface LinkGroupsProps {
 }
 
 const LinkItem = ({ icon: Icon, link, size = 23, color = "primary", }: LinkGroupsProps) => {
+    if (!link) return;
     return (
         <a href={link} target="_blank" rel="noopener noreferrer">
             <button className="text-white border border-primary rounded-full p-2 hover:bg-foreground mx-2">

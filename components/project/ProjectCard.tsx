@@ -4,6 +4,7 @@ import iconLinks from "@/constants/iconLinks";
 import LinkItem from "../navigation/LinkItem";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from 'next/navigation'
 
 export type PropsTypes = {
     project: {
@@ -19,6 +20,14 @@ export type PropsTypes = {
 };
 
 export default function ProjectCard({ project }: PropsTypes) {
+    const pathname = usePathname();
+
+
+    const linkMapping: { [key: number]: string } = {
+        0: `${pathname}?id=${project.id}`,
+        1: project.githubLink || "",
+        2: project.demoLink || "",
+    };
     return (
         <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] md:w-[48%] lg:w-[30%] mt-[20px] min-h-[180px] relative">
 
@@ -48,15 +57,18 @@ export default function ProjectCard({ project }: PropsTypes) {
             </div>
 
             <div className="mt-3 absolute bottom-3 left-[50%] transform translate-x-[-50%] flex gap-2">
-                {iconLinks.map((link, index) => (
-                    <LinkItem
-                        key={index}
-                        icon={link.icon}
-                        link={link.link}
-                        color={link.color}
-                        size={18}
-                    />
-                ))}
+                {iconLinks.map((link, index) => {
+                    link.link = linkMapping[index] || "";
+                    return (
+                        <LinkItem
+                            key={index}
+                            icon={link.icon}
+                            link={link.link}
+                            color={link.color}
+                            size={18}
+                        />
+                    )
+                })}
             </div>
 
         </div>
