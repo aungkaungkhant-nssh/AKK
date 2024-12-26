@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: PropsTypes) {
 
 
     const linkMapping: { [key: number]: string } = {
-        0: `${pathname}?id=${project.id}`,
+        0: `${pathname}/${project.id}`,
         1: project.githubLink || "",
         2: project.demoLink || "",
     };
@@ -34,7 +34,7 @@ export default function ProjectCard({ project }: PropsTypes) {
             <div className={cn("flex items-start gap-3 justify-between")}>
                 <div>
                     <div>
-                        <Link href="/">
+                        <Link href={linkMapping[0] || ""}>
                             <h1 className={cn(`text-xl text-primary font-bold`)}>{project.title}</h1>
                         </Link>
 

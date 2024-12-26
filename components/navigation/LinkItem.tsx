@@ -12,8 +12,8 @@ interface LinkGroupsProps {
 const LinkItem = ({ icon: Icon, link, size = 23, color = "primary", }: LinkGroupsProps) => {
     if (!link) return;
     return (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-            <button className="text-white border border-primary rounded-full p-2 hover:bg-foreground mx-2">
+        <a href={link} rel="noopener noreferrer">
+            <button  className="text-white border border-primary rounded-full p-2 hover:bg-foreground mx-2" >
                 <motion.div
                     initial={{ scale: 0, opacity: 0, rotate: -45 }}
                     animate={{ scale: 1, opacity: 1, rotate: 0 }}
@@ -32,7 +32,7 @@ const LinkItem = ({ icon: Icon, link, size = 23, color = "primary", }: LinkGroup
                     <Icon className={`text-${color}`} size={size} />
                 </motion.div>
             </button>
-        </a>
+        </a >
     );
 };
 
