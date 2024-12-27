@@ -19,6 +19,7 @@ export const projectLists = [
         subTitle: "Explore my portfolio to see projects that showcase my skills.",
         desc: "Lorem ipsum",
         logo: Pf.src,
+        photo: ToeTetSS.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/AKK",
         demoLink: "https://akk-portfolio.vercel.app/",
         techStacks: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
@@ -27,7 +28,7 @@ export const projectLists = [
     {
         id: 2,
         title: 'Toe Tet',
-        subTitle: "Toe Tet: Empowering Learners with Accessible Online Education",
+        subTitle: "Empowering Learners with Accessible Online Education",
         desc: "Toe Tet is an e-learning platform offering courses in business, marketing, programming, and more. With a user-friendly interface and expert instructors, it aims to make online learning accessible and effective.",
         logo: ToeTet.src,
         photo: ToeTetSS.src,

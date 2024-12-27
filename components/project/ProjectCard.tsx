@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import iconLinks from "@/constants/iconLinks";
 import LinkItem from "../navigation/LinkItem";
 import Link from "next/link";
@@ -29,34 +28,30 @@ export default function ProjectCard({ project }: PropsTypes) {
         2: project.demoLink || "",
     };
     return (
-        <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] md:w-[48%] lg:w-[30%] mt-[20px] min-h-[180px] relative">
-
-            <div className={cn("flex items-start gap-3 justify-between")}>
-                <div>
-                    <div>
-                        <Link href={linkMapping[0] || ""}>
-                            <h1 className={cn(`text-xl text-primary font-bold`)}>{project.title}</h1>
-                        </Link>
-
-                        <p className="text-tertiary tracking-wide text-justify mt-1">{project.subTitle}</p>
-                    </div>
-
+        <div className="bg-foreground text-tertiary px-6 py-5 rounded-lg shadow-lg shadow-primary/20 w-full md:w-[48%] lg:w-[30%] mt-5 min-h-[200px] relative transition-transform transform hover:scale-105">
+            <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                    <Link href={linkMapping[0] || ""}>
+                        <h1 className="text-xl text-primary font-bold hover:underline">{project.title}</h1>
+                    </Link>
+                    <p className="text-tertiary tracking-wide text-justify mt-2 leading-relaxed">
+                        {project.subTitle}
+                    </p>
                 </div>
-                <div>
-                    {(
+                {project.logo && (
+                    <div className="flex-shrink-0">
                         <Image
                             src={project.logo as string}
                             alt={`${project.title} logo`}
-                            className="border rounded-lg"
-                            width={100}
-                            height={100}
-                        />)
-                    }
-
-                </div>
+                            className="border border-gray-200 rounded-lg shadow-md"
+                            width={80}
+                            height={80}
+                        />
+                    </div>
+                )}
             </div>
 
-            <div className="mt-3 absolute bottom-3 left-[50%] transform translate-x-[-50%] flex gap-2">
+            <div className="mt-4 absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-3">
                 {iconLinks.map((link, index) => {
                     link.link = linkMapping[index] || "";
                     return (
@@ -65,12 +60,12 @@ export default function ProjectCard({ project }: PropsTypes) {
                             icon={link.icon}
                             link={link.link}
                             color={link.color}
-                            size={18}
+                            size={20}
                         />
-                    )
+                    );
                 })}
             </div>
-
         </div>
+
     );
 }
