@@ -12,7 +12,7 @@ export default async function Page({
     if (!project) return <div>Project not found</div>
 
     return (
-        <MaxWidthWrapper className="md:h-screen  relative  pt-32 lg:pt-24  px-4 sm:px-8 md:px-12 max-w-6xl">
+        <MaxWidthWrapper className=" relative  pt-32 lg:pt-24  px-4 sm:px-8 md:px-12 max-w-6xl">
             <ProjectDetails project={project} />
         </MaxWidthWrapper>
     )

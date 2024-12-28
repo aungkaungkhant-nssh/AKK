@@ -24,7 +24,7 @@ type PropTypes = {
 export default function ProjectDetails({ project }: PropTypes) {
     const router = useRouter();
     return (
-        <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] mt-[20px]  relative">
+        <div className="bg-foreground text-tertiary px-4 py-3 rounded-lg shadow-lg shadow-primary/20 w-[100%] my-[20px]  relative">
             <AnimatedButton
                 text='Back'
                 icon={<ChevronLeft size={24} />}
@@ -105,3 +105,4 @@ export default function ProjectDetails({ project }: PropTypes) {
         </div>
     )
 }
+
