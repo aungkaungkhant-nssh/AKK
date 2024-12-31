@@ -1,14 +1,10 @@
 "use client"
-import {
-    Avatar,
-} from "@/components/ui/avatar"
-import Pf from '@/public/images/pf.png'
-import { AvatarFallback } from "@radix-ui/react-avatar"
-import Image from "next/image"
 import { motion } from 'framer-motion'
-export default function Profile({}) {
+import { Code, CodeXmlIcon } from "lucide-react"
+export default function Profile({ }) {
     return (
         <motion.div
+            className='cursor-pointer'
             initial={{ rotateY: 90, opacity: 0 }}
             animate={{ rotateY: 0, opacity: 1 }}
             transition={{
@@ -19,16 +15,11 @@ export default function Profile({}) {
             }}
             whileHover={{ scale: 1.1, rotateY: -10 }}
         >
-            <Avatar className="w-[60px] h-[60px]">
-                <AvatarFallback>
-                    <Image
-                        src={Pf}
-                        alt="akk"
-                        className=""
-                        fill={true}
-                    />
-                </AvatarFallback>
-            </Avatar>
+            <div className='flex gap-2 items-center '>
+                <Code className=' text-white ' />
+                <h1 className='text-primary font-bold text-2xl'>Mg Kaung</h1>
+                <CodeXmlIcon className='text-white' />
+            </div>
         </motion.div>
     )
 }

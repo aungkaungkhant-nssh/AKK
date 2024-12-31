@@ -22,7 +22,7 @@ const menuLists = [
     {
         id: 5,
         name: "Contact",
-        path: "/contact"
+        path: "/contacts"
     }
 ]
 

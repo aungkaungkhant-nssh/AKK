@@ -47,7 +47,7 @@ export default function SideMenu() {
                                     <IoClose size={30} className="cursor-pointer" onClick={() => setOpen(prev => !prev)} />
                                 </div>
                                 <div className="h-full mt-[80px]">
-                                    <MenuList className="flex-col " />
+                                    <MenuList className="flex-col" setOpen={setOpen} />
                                 </div>
                                 <div className="absolute bottom-0 left-[30%] ">
                                     {

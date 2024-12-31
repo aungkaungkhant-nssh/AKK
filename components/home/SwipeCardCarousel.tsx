@@ -6,6 +6,7 @@ import akk1 from '@/public/images/pf.png'
 import akk2 from '@/public/images/akk.jpeg'
 import akk3 from '@/public/images/akk3.jpeg'
 import akk4 from '@/public/images/akk4.jpg';
+import akk5 from '@/public/images/akk5.jpg';
 type Card = {
     id: number;
     image: string;
@@ -30,7 +31,7 @@ const cardsData: Card[] = [
     },
     {
         id: 5,
-        image: akk1.src,
+        image: akk5.src,
     },
 ];
 

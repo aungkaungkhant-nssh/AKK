@@ -1,4 +1,4 @@
-import Pf from '@/public/images/pf.png'
+
 import ToeTet from '@/public/images/toetet.png'
 import Insider from '@/public/images/insider.png';
 import DramLab from '@/public/images/dreamlab.png';
@@ -10,7 +10,12 @@ import InstaPostSS from '@/public/images/instapostss.jpg';
 import AkkSportWearSS from '@/public/images/akksportwearss.jpg';
 import SproutScribbleSS from '@/public/images/sproutscribless.png';
 import UltimateSS from '@/public/images/ultimatess.png';
-import Ucsl from '@/public/images/ucslss.png'
+import Ucsl from '@/public/images/ucslss.png';
+import logo from '@/public/images/logo1.webp';
+import UCSLLogo from '@/public/images/ucsl.png';
+import InstaLogo from '@/public/images/instalogo.webp';
+import AkkSportLogo from '@/public/images/akksportlogo.webp';
+import SproutLogo from '@/public/images/sproutslogo.webp'
 
 export const projectLists = [
     {
@@ -18,7 +23,7 @@ export const projectLists = [
         title: 'AKK Portfolio',
         subTitle: "Explore my portfolio to see projects that showcase my skills.",
         desc: "The AKK Portfolio is a personal website designed to showcase my projects and skills in web development. This portfolio highlights a clean and modern interface built with Next.js and styled using Tailwind CSS. With a focus on responsiveness, the site ensures optimal performance and accessibility across all devices. Through the use of TypeScript and Vercel for deployment, the portfolio reflects best practices in front-end development and deployment pipelines",
-        logo: Pf.src,
+        logo: logo.src,
         photo: ToeTetSS.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/AKK",
         demoLink: "https://akk-portfolio.vercel.app/",
@@ -45,6 +50,7 @@ export const projectLists = [
         logo: Insider.src,
         photo: InsiderSS.src,
         githubLink: null,
+        demoLink: "https://www.insidernote.app/user/feed/for-you",
         techStacks: ["Nest Js", "Postgresql", "TypeOrm"],
         responsibilities: "Engineered the backend system to efficiently handle large-scale data processing and API integrations using Nest.js and PostgreSQL. Collaborated closely with the frontend and design teams to create a seamless user experience."
     },
@@ -65,7 +71,7 @@ export const projectLists = [
         title: 'Insta Posts',
         subTitle: "Where connections thrive, stories are shared, and communities grow.",
         desc: "Connect, share, and engage on [Insta Post], the ultimate social media platform designed to bring people together. Whether you're sharing moments, exploring new interests, or building your community, [Insta Posts] makes it easy to stay connected with what matters most.",
-        logo: DramLab.src,
+        logo: InstaLogo.src,
         photo: InstaPostSS.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/SocialMedia",
         demoLink: null,
@@ -77,7 +83,7 @@ export const projectLists = [
         title: 'AKK Sport Wear',
         subTitle: "Gear Up for the Game with Premium Football Equipment",
         desc: "AKK Sport Wear is an e-commerce platform tailored for premium football equipment. The platform provides users with a streamlined shopping experience, featuring a responsive and user-friendly interface built with React.js and styled using Tailwind CSS. The backend, powered by Express.js and MongoDB, ensures efficient data management and scalability. Secure payment processing is facilitated through Stripe integration, with webhooks automating key operations for enhanced functionality. This project emphasizes performance, usability, and secure transactions, catering to football enthusiasts seeking high-quality gear",
-        logo: DramLab.src,
+        logo: AkkSportLogo.src,
         photo: AkkSportWearSS.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/Football-equipment",
         demoLink: null,
@@ -90,7 +96,7 @@ export const projectLists = [
         title: 'Sprout Scribble',
         subTitle: "Ultimate Next Js project for e-commerce",
         desc: "Sprout Scribble is a cutting-edge e-commerce platform designed to deliver a seamless shopping experience. Built with Next.js, the platform offers fast and dynamic web pages, styled elegantly using Tailwind CSS. State management is handled efficiently with Zustand, while Zod ensures robust input validation for secure and error-free operations. The backend employs Drizzle ORM with Neon Database for optimized data handling, and Stripe integration enables secure and hassle-free payment processing. This project highlights a modern tech stack to create a performant and scalable e-commerce solution",
-        logo: DramLab.src,
+        logo: SproutLogo.src,
         photo: SproutScribbleSS.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/Sprout-Scribble",
         demoLink: null,
@@ -103,7 +109,7 @@ export const projectLists = [
         title: 'UCSL Volting System',
         subTitle: "Empowering Students to Choose Their King and Queen through a Fair Voting System",
         desc: "Our university voting system is designed to provide a seamless and transparent process for selecting the king and queen. By leveraging an easy-to-use digital platform, students can cast their votes in real-time, ensuring that every voice is heard. The system promotes fairness, security, and efficiency, allowing participants to engage in the election with confidence. With this solution, we aim to create a fun and democratic way for students to elect their university leaders.",
-        logo: DramLab.src,
+        logo: UCSLLogo.src,
         photo: Ucsl.src,
         githubLink: "https://github.com/aungkaungkhant-nssh/UCSLVoltingSystem",
         techStacks: ["React Js", "MUI", "Express Js", "MongoDB"],

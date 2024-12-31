@@ -5,10 +5,12 @@ import Link from "next/link";
 import { motion } from 'framer-motion'
 import { usePathname } from "next/navigation";
 type Props = {
-    className?: string
+    className?: string;
+    setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export default function MenuList({ className }: Props) {
+export default function MenuList({ className, setOpen }: Props) {
     const pathName = usePathname();
+
     return (
         <ul className={cn("flex items-center gap-10", className)}>
             {
@@ -20,7 +22,9 @@ export default function MenuList({ className }: Props) {
                                     "font-medium text-md  text-tertiary",
                                     pathName === link.path && ("text-primary")
                                 )
-                            }>
+                            }
+                            onClick={() => setOpen && setOpen(false)}
+                        >
                             {link.name}
                             {
                                 link.path === pathName && (

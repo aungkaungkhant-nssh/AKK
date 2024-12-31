@@ -1,7 +1,7 @@
 "use client"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { FileUser } from "lucide-react";
+import {  FileUser } from "lucide-react";
 
 interface AnimatedButtonProps {
     text: string;
@@ -13,6 +13,7 @@ interface AnimatedButtonProps {
     hoverFromColor?: string;
     hoverToColor?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    isLeft?: boolean
 }
 
 function AnimatedButton({
@@ -25,6 +26,7 @@ function AnimatedButton({
     toColor = "#dc2626",
     hoverFromColor = "#6b7280",
     hoverToColor = "#dc2626",
+    isLeft = true,
 
 }: AnimatedButtonProps) {
     return (
@@ -42,8 +44,9 @@ function AnimatedButton({
             onClick={onClick}
         >
             <div className="text-primary font-black text-lg  flex gap-1 h-full w-full items-center justify-center rounded-full bg-black transition duration-300 ease-in-out">
-                {icon} {/* Render the icon */}
+                {isLeft && icon}
                 <span>{text}</span>
+                {!isLeft && icon}
             </div>
         </motion.button>
     );

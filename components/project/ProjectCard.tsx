@@ -28,11 +28,11 @@ export default function ProjectCard({ project }: PropsTypes) {
         2: project.demoLink || "",
     };
     return (
-        <div className="bg-foreground text-tertiary px-6 py-5 rounded-lg shadow-lg shadow-primary/20 w-full md:w-[48%] lg:w-[30%] mt-5 min-h-[200px] relative transition-transform transform hover:scale-105">
+        <div className="bg-background text-tertiary px-6 py-5 rounded-lg shadow-lg shadow-primary/20 w-full md:w-[48%] lg:w-[30%]  min-h-[200px] relative transition-transform transform hover:scale-105">
             <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                     <Link href={linkMapping[0] || ""}>
-                        <h1 className="text-xl text-primary font-bold hover:underline">{project.title}</h1>
+                        <h1 className="text-xl text-white font-bold hover:underline">{project.title}</h1>
                     </Link>
                     <p className="text-tertiary tracking-wide text-justify mt-2 leading-relaxed">
                         {project.subTitle}
