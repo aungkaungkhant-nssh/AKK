@@ -4,7 +4,7 @@ import MaxWidthWrapper from "@/components/wrappers/MaxWidthWrapper";
 
 export default function Project() {
     return (
-        <MaxWidthWrapper className=" relative  pt-32 lg:pt-24  px-4 sm:px-8 md:px-12">
+        <MaxWidthWrapper className=" relative py-[90px] lg:pt-24  px-4 sm:px-8 md:px-12">
             <ProjectShow />
             <ProjectLists />
         </MaxWidthWrapper>

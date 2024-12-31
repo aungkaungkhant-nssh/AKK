@@ -5,7 +5,7 @@ import MaxWidthWrapper from "@/components/wrappers/MaxWidthWrapper";
 
 export default function Home() {
   return (
-    <MaxWidthWrapper >
+    <MaxWidthWrapper className="pb-[90px]">
       <div className="text-white flex flex-col  px-4 justify-between">
         <div className="text-white flex flex-col">
           <Intro />
