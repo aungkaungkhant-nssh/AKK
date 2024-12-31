@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 
-export function useReadingProgress() {
+ function useReadingProgress() {
     const [completion, setCompletion] = useState(0);
     useEffect(() => {
         function updateScrollCompletion() {
@@ -25,3 +25,5 @@ export function useReadingProgress() {
     }, []);
     return completion;
 }
+
+export default useReadingProgress

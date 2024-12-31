@@ -7,7 +7,7 @@ import TypingEffect from "./TypingEffect"
 
 export default function Intro() {
     const handleExploreResume = () => {
-        window.open("https://docs.google.com/document/d/1k3jm-f7Gnhmp-zSrl4pAP4Jr7yFEk_cE/edit?usp=sharing&ouid=107337763190109767832&rtpof=true&sd=true", "_blank");
+        window.open("https://www.linkedin.com/in/aung-kaung-khant-7682ab245", "_blank");
     }
     return (
         <div className="h-screen flex flex-col-reverse lg:flex-row lg:justify-between gap-[45px]  justify-center items-center relative text-center lg:text-left mt-6 lg:mt-0">

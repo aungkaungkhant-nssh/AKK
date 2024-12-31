@@ -1,10 +1,20 @@
 "use client"
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 export default function ScrollPointer() {
-    const scrollToNextSection = ()=>{
-        const element = document.getElementById("about") as HTMLElement;
-        element.scrollIntoView({behavior:"smooth"})
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true) // Runs only on the client side
+    }, [])
+
+    const scrollToNextSection = () => {
+        if (isClient) {
+            const element = document.getElementById("about") as HTMLElement;
+            element.scrollIntoView({ behavior: "smooth" })
+        }
     }
+
     return (
         <motion.div
             className='absolute bottom-8 left-[45%] border border-primary rounded-full p-2 hover:bg-foreground cursor-pointer '
@@ -21,3 +31,5 @@ export default function ScrollPointer() {
         </motion.div>
     )
 }
+
+

@@ -1,8 +1,12 @@
 "use client"
-import Lottie from 'lottie-react'
+const Lottie = dynamic(() => import('lottie-react'), {
+    ssr: false,
+});
+
 import pm from '@/public/pm2.json'
 import { GraduationCap } from 'lucide-react'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic';
 export default function About() {
 
     return (
